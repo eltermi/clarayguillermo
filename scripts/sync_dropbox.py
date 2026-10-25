@@ -11,6 +11,12 @@ IMAGE_EXT={'.jpg','.jpeg','.png','.webp','.heic','.heif','.avif'}
 VIDEO_EXT={'.mov','.mp4','.m4v','.webm','.avi','.mkv','.3gp'}
 def initial_media():
  return json.loads((ROOT/'media.js').read_text().split('=',1)[1].rstrip(';\n'))
+def order_media(media):
+ config=ROOT/'gallery-order.json'
+ featured=json.loads(config.read_text()).get('featured',[]) if config.exists() else []
+ rank={src:i for i,src in enumerate(featured)}
+ ordered=[{**m,'featured':m.get('src') in rank} for m in media]
+ return sorted(ordered,key=lambda m:rank.get(m['src'],len(rank)))
 def zip_url(url):
  p=urlsplit(url)
  if p.scheme!='https' or p.hostname not in {'www.dropbox.com','dropbox.com'}:raise ValueError('Expected a Dropbox HTTPS shared folder link')
@@ -74,7 +80,7 @@ def sync(url,force=False,archive=None):
     except Exception as e:
      dest.unlink(missing_ok=True);thumb.unlink(missing_ok=True);errors.append(info.filename);print('Unable to import',Path(info.filename).name,type(e).__name__,str(e),flush=True)
     finally:src.unlink(missing_ok=True)
-  media=added+media
+  media=order_media(added+media)
   if added:
    atomic_json(FEED,{'updated_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'media':media})
    (ROOT/'media.js').write_text('window.WEDDING_MEDIA='+json.dumps(media,ensure_ascii=False)+';\n')

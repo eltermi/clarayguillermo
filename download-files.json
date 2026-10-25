@@ -1,7 +1,7 @@
 [
   {
     "path": "app.js",
-    "size": 4873
+    "size": 5103
   },
   {
     "path": "assets/hero.jpg",
@@ -521,18 +521,18 @@
   },
   {
     "path": "index.html",
-    "size": 5021
+    "size": 5250
   },
   {
     "path": "live-media.json",
-    "size": 15924
+    "size": 17519
   },
   {
     "path": "media.js",
-    "size": 12589
+    "size": 13800
   },
   {
     "path": "style.css",
-    "size": 10480
+    "size": 11167
   }
 ]
