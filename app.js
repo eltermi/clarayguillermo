@@ -8,3 +8,26 @@ function step(delta){current=(current+delta+filtered().length)%filtered().length
 modal.querySelector('.close').onclick=()=>modal.close();modal.addEventListener('close',()=>{modal.querySelector('video')?.pause();modal.querySelector('.viewer').replaceChildren();document.body.classList.remove('modal-open')});document.querySelector('#prev').onclick=()=>step(-1);document.querySelector('#next').onclick=()=>step(1);document.addEventListener('keydown',e=>{if(!modal.open)return;if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
 document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;shown=18;document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});render()});document.querySelector('#load-more').onclick=()=>{shown+=18;render()};
 document.querySelector('#share').onclick=async()=>{const data={title:'Clara y Guillermo · Menuda fiesta',text:'Las pruebas de la fiesta. Sube las tuyas también.',url:location.href.split('#')[0]};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(data.url);document.querySelector('#share-status').textContent='Enlace copiado. ¡Al grupo!'}}catch(e){if(e.name!=='AbortError')document.querySelector('#share-status').textContent='Copia el enlace de la barra del navegador para compartirlo.'}};render();
+
+// Refresh the public gallery feed without waiting for another OVH deployment.
+const liveBase='https://raw.githubusercontent.com/eltermi/clarayguillermo/main/';
+let pendingMedia=null,lastFeed='',refreshing=false;
+function applyLiveMedia(items){media.splice(0,media.length,...items);render()}
+function safeMediaPath(path){return typeof path==='string'&&/^assets\/[a-zA-Z0-9_./-]+$/.test(path)&&!path.split('/').includes('..')?new URL(path,liveBase).href:null}
+async function refreshGallery(){
+ if(refreshing||document.visibilityState==='hidden')return;
+ refreshing=true;
+ try{
+  const response=await fetch(liveBase+'live-media.json?v='+Math.floor(Date.now()/60000),{credentials:'omit',cache:'no-store'});
+  if(!response.ok)return;
+  const feed=await response.json();if(!Array.isArray(feed.media)||!feed.media.length)return;
+  const version=JSON.stringify(feed);if(version===lastFeed)return;
+  const items=feed.media.map(m=>{const src=safeMediaPath(m.src),thumb=safeMediaPath(m.thumb);return src&&thumb&&['photo','video'].includes(m.type)?{...m,src,thumb,original:src}:null}).filter(Boolean);
+  if(items.length!==feed.media.length)return;
+  lastFeed=version;
+  if(modal.open)pendingMedia=items;else applyLiveMedia(items);
+ }catch(error){console.info('Se mantiene el álbum disponible; se volverá a comprobar la galería.')}finally{refreshing=false}
+}
+modal.addEventListener('close',()=>{if(pendingMedia){applyLiveMedia(pendingMedia);pendingMedia=null}});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshGallery()});
+refreshGallery();setInterval(refreshGallery,60000);
