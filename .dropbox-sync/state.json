@@ -231,8 +231,32 @@
     "4a4d3bddb4f8133b1627b0cccfa0d852d2b717a8a7831b8168f869b0111477ac": {
       "name": "Foto 24-10-26, 14 29 11 (1).jpg",
       "src": "assets/p01.jpg"
+    },
+    "a62e8073bcc4c3920a240d7195d442c3e27ebd6baf31fa38ef7bc6855fbc5113": {
+      "name": "Rafa - IMG_5656.mov",
+      "src": "assets/live/a62e8073bcc4c3920a240d71.mp4"
+    },
+    "63241066aaf40d594871ba3f14aebb271fc1f95df5666731ce53d8729a2dd245": {
+      "name": "Rafa - IMG_5657.mov",
+      "src": "assets/live/63241066aaf40d594871ba3f.mp4"
+    },
+    "59e1e6abde2ac0238fd8cc253413afbec7e9ff3427acb5fe0a4830f3682adba9": {
+      "name": "Rafa - IMG_5655.mov",
+      "src": "assets/live/59e1e6abde2ac0238fd8cc25.mp4"
+    },
+    "c279dd7adc9c1a16c81b99ad8ef0e276e2912a28430eee1a88420e270f8e62de": {
+      "name": "Rafa - IMG_5666.jpeg",
+      "src": "assets/live/c279dd7adc9c1a16c81b99ad.jpg"
+    },
+    "a69116c46e3273b4e0977e78877079f750583c103e8a0343ef32f90660be2048": {
+      "name": "Rafa - IMG_5665.jpeg",
+      "src": "assets/live/a69116c46e3273b4e0977e78.jpg"
+    },
+    "760e53cc238b1a7c8eede644741939bf4abfaf638661bf750cebf02dc36390ef": {
+      "name": "Angeles - IMG-20261024-WA0018.jpg",
+      "src": "assets/live/760e53cc238b1a7c8eede644.jpg"
     }
   },
-  "last_full_scan": 0,
-  "zip_size": 0
+  "last_full_scan": 1792923425,
+  "zip_size": 1601303022
 }

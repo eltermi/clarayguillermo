@@ -8,6 +8,54 @@
     "size": 481428
   },
   {
+    "path": "assets/live/59e1e6abde2ac0238fd8cc25-thumb.jpg",
+    "size": 12873
+  },
+  {
+    "path": "assets/live/59e1e6abde2ac0238fd8cc25.mp4",
+    "size": 2968895
+  },
+  {
+    "path": "assets/live/63241066aaf40d594871ba3f-thumb.jpg",
+    "size": 19427
+  },
+  {
+    "path": "assets/live/63241066aaf40d594871ba3f.mp4",
+    "size": 3070894
+  },
+  {
+    "path": "assets/live/760e53cc238b1a7c8eede644-thumb.webp",
+    "size": 40064
+  },
+  {
+    "path": "assets/live/760e53cc238b1a7c8eede644.jpg",
+    "size": 363217
+  },
+  {
+    "path": "assets/live/a62e8073bcc4c3920a240d71-thumb.jpg",
+    "size": 16150
+  },
+  {
+    "path": "assets/live/a62e8073bcc4c3920a240d71.mp4",
+    "size": 2712138
+  },
+  {
+    "path": "assets/live/a69116c46e3273b4e0977e78-thumb.webp",
+    "size": 48724
+  },
+  {
+    "path": "assets/live/a69116c46e3273b4e0977e78.jpg",
+    "size": 300170
+  },
+  {
+    "path": "assets/live/c279dd7adc9c1a16c81b99ad-thumb.webp",
+    "size": 27250
+  },
+  {
+    "path": "assets/live/c279dd7adc9c1a16c81b99ad.jpg",
+    "size": 249447
+  },
+  {
     "path": "assets/p00.jpg",
     "size": 423025
   },
@@ -477,11 +525,11 @@
   },
   {
     "path": "live-media.json",
-    "size": 13649
+    "size": 15924
   },
   {
     "path": "media.js",
-    "size": 10662
+    "size": 12589
   },
   {
     "path": "style.css",

@@ -1,6 +1,66 @@
 {
-  "updated_at": "2026-10-24T00:00:00Z",
+  "updated_at": "2026-10-25T10:17:05Z",
   "media": [
+    {
+      "id": "a62e8073bcc4c3920a240d7195d442c3e27ebd6baf31fa38ef7bc6855fbc5113",
+      "type": "video",
+      "src": "assets/live/a62e8073bcc4c3920a240d71.mp4",
+      "thumb": "assets/live/a62e8073bcc4c3920a240d71-thumb.jpg",
+      "width": 500,
+      "height": 281,
+      "alt": "Un momento de la fiesta de Clara y Guillermo",
+      "time": "Rafa - IMG_5656.mov"
+    },
+    {
+      "id": "63241066aaf40d594871ba3f14aebb271fc1f95df5666731ce53d8729a2dd245",
+      "type": "video",
+      "src": "assets/live/63241066aaf40d594871ba3f.mp4",
+      "thumb": "assets/live/63241066aaf40d594871ba3f-thumb.jpg",
+      "width": 500,
+      "height": 281,
+      "alt": "Un momento de la fiesta de Clara y Guillermo",
+      "time": "Rafa - IMG_5657.mov"
+    },
+    {
+      "id": "59e1e6abde2ac0238fd8cc253413afbec7e9ff3427acb5fe0a4830f3682adba9",
+      "type": "video",
+      "src": "assets/live/59e1e6abde2ac0238fd8cc25.mp4",
+      "thumb": "assets/live/59e1e6abde2ac0238fd8cc25-thumb.jpg",
+      "width": 500,
+      "height": 281,
+      "alt": "Un momento de la fiesta de Clara y Guillermo",
+      "time": "Rafa - IMG_5655.mov"
+    },
+    {
+      "id": "c279dd7adc9c1a16c81b99ad8ef0e276e2912a28430eee1a88420e270f8e62de",
+      "type": "photo",
+      "src": "assets/live/c279dd7adc9c1a16c81b99ad.jpg",
+      "thumb": "assets/live/c279dd7adc9c1a16c81b99ad-thumb.webp",
+      "width": 600,
+      "height": 338,
+      "alt": "Un momento de la fiesta de Clara y Guillermo",
+      "time": "Rafa - IMG_5666.jpeg"
+    },
+    {
+      "id": "a69116c46e3273b4e0977e78877079f750583c103e8a0343ef32f90660be2048",
+      "type": "photo",
+      "src": "assets/live/a69116c46e3273b4e0977e78.jpg",
+      "thumb": "assets/live/a69116c46e3273b4e0977e78-thumb.webp",
+      "width": 450,
+      "height": 800,
+      "alt": "Un momento de la fiesta de Clara y Guillermo",
+      "time": "Rafa - IMG_5665.jpeg"
+    },
+    {
+      "id": "760e53cc238b1a7c8eede644741939bf4abfaf638661bf750cebf02dc36390ef",
+      "type": "photo",
+      "src": "assets/live/760e53cc238b1a7c8eede644.jpg",
+      "thumb": "assets/live/760e53cc238b1a7c8eede644-thumb.webp",
+      "width": 600,
+      "height": 450,
+      "alt": "Un momento de la fiesta de Clara y Guillermo",
+      "time": "Angeles - IMG-20261024-WA0018.jpg"
+    },
     {
       "type": "photo",
       "src": "assets/p07.jpg",
